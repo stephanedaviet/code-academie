@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Lectures d'un jour</title>
+				<style type="text/css">
+		    		body {
+		    		    font-family: Helvetica, Tahoma, Arial, sans-serif;
+		    		}
+		    		h1 {
+		    		    color: #F4B400;
+		    		}
+		    		li {
+		    		    cursor: pointer;
+		    		}
+		    		.title {
+		    		    font-weight: bold;
+		    		}
+		    		.author {
+		    		    font-style: italic;
+		    		    color: #4FC3F7;
+		    		}
+		    		.read {
+		    		    text-decoration: line-through;
+		    		}
+				</style>
+		</head>
+		<body>
+				<article>
+						<h1>La liste de mes lectures</h1>
+						<ul>
+								<li>
+										<span class="title">Zaï zaï zaï zaï</span> –
+										<span class="author">Fabcaro</span> –
+										<span class="date">2015</span>
+								</li>
+								<li>
+										<span class="title">Eux sur la photo</span> –
+										<span class="author">Hélène Gestern</span> –
+										<span class="date">2011</span>
+								</li>
+								<li>
+										<span class="title">Apnées</span> –
+										<span class="author">Antoine Choplin</span> –
+										<span class="date">2010</span>
+								</li>
+								<li>
+										<span class="title">Là où vont nos pères</span> –
+										<span class="author">Shaun Tan</span> –
+										<span class="date">2007</span>
+								</li>
+						</ul>
+    		</article>
+
+				<script>
+						[...document.getElementsByTagName('li')]
+								.forEach(element => element.onclick = function(event) {
+										event.currentTarget.classList.add('read')
+						})
+				</script>
+	  </body>
+</html>
